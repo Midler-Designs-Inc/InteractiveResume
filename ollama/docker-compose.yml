@@ -3,6 +3,8 @@ services:
     build: .
     container_name: ollama
     restart: unless-stopped
+    mem_limit: 16g
+    memswap_limit: 16g
     deploy:
       resources:
         reservations:
