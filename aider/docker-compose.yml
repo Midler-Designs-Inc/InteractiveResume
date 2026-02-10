@@ -1,0 +1,11 @@
+services:
+  aider:
+    build: ./
+    container_name: aider
+    tty: true
+    stdin_open: true
+    volumes:
+      - ../:/workspace
+    environment:
+      - OLLAMA_API_BASE=http://host.docker.internal:11434
+    command: ["--model", "ollama/qwen3-coder:30b"]
