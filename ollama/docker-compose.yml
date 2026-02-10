@@ -1,0 +1,22 @@
+services:
+  ollama:
+    build: .
+    container_name: ollama
+    restart: unless-stopped
+    # GPU passthrough (works with Windows + NVIDIA Container Toolkit)
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    stdin_open: true
+    tty: true
+
+volumes:
+  ollama-data:
