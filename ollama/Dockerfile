@@ -22,6 +22,9 @@ WORKDIR /ollama
 # Install Ollama Linux
 RUN curl -fsSL https://ollama.com/install.sh | sh
 
+# Set Ollama to listen on all interfaces
+ENV OLLAMA_HOST=0.0.0.0:11434
+
 # Expose Ollama API port
 EXPOSE 11434
 

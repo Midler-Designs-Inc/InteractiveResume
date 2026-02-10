@@ -8,4 +8,6 @@ services:
       - ../:/workspace
     environment:
       - OLLAMA_API_BASE=http://host.docker.internal:11434
-    command: ["--model", "qwen3-coder-next", "--yes-always", "--no-auto-commits"]
+    command: ["--model", "ollama/qwen2.5-coder:14b", "--yes-always", "--no-auto-commits"]
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
