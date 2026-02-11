@@ -3,7 +3,8 @@ export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: { enabled: true },
     css: [
-        '~/assets/scss/purple.scss'
+        '~/assets/scss/purple.scss',
+        '@fortawesome/fontawesome-free/css/all.min.css'
     ],
     build: {
         transpile: ['@popperjs/core']

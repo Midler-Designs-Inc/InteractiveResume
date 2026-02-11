@@ -2,8 +2,9 @@
   <div class="mb-5 position-relative">
     <div class="container-fluid px-3">
       <div class="row g-4 align-items-center">
-        <!-- Left Column: Hero Content -->
+        <!-- Left Column: Heading/Summary -->
         <div class="col-lg-6">
+          <!-- Header/Intro Text -->
           <h1 class="display-2 fw-bold mb-3 text-gradient-primary tracking-widest hero-title-animated">
             Jeffery Midler
           </h1>
@@ -12,6 +13,7 @@
             cloud architecture, and innovative solutions.
           </p>
 
+          <!-- Hilights !-->
           <div class="row g-3 text-center">
             <div class="col-4">
               <div class="icon-container icon-pulse d-flex align-items-center justify-content-center mx-auto mb-2 rounded-3 fs-3">
@@ -35,18 +37,19 @@
               <p class="fw-semibold mb-0 text-gradient-secondary fs-6">8+ Years</p>
             </div>
           </div>
-
-
         </div>
 
-        <!-- Right Column: AI Avatar -->
+        <!-- Right Column: AI Avatar / Rings Effect -->
         <div class="col-lg-6">
           <div class="d-flex justify-content-center position-relative">
             <div class="avatar-container position-relative mx-auto">
+              <!-- Rings Effect -->
               <div class="avatar-ring position-absolute top-0 start-0 w-100 h-100 rounded-circle"></div>
               <div class="avatar-ring-middle position-absolute top-50 start-50 translate-middle rounded-circle w-88 h-88"></div>
               <div class="avatar-ring-inner position-absolute top-50 start-50 translate-middle rounded-circle w-76 h-76"></div>
               <div class="avatar-crosshair position-absolute top-0 start-0 w-100 h-100"></div>
+
+              <!-- Avatar -->
               <div class="avatar-content position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center justify-content-center fs-1">
                 🤖
               </div>
