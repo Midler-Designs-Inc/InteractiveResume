@@ -18,6 +18,11 @@ $text-muted: rgba(255, 255, 255, 0.5);
   font-size: 0.7rem;
 }
 
+// Utility Classes - Cursors
+.cursor-pointer {
+  cursor: pointer;
+}
+
 // Utility Classes - Gradient Text
 .text-gradient-primary {
   background: linear-gradient(135deg, #fff 0%, $primary-purple 50%, $secondary-purple 100%);

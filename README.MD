@@ -23,11 +23,10 @@ cd C:\path\to\your\project
 #    Replace 'qwen3-coder-next' with your local Ollama model if needed
 #    --yes-always automatically confirms prompts
 #    --no-auto-commits prevents automatic git commits
-aider --model qwen3-coder-next --yes-always --no-auto-commits
+aider --model ollama/qwen3-coder-next --yes-always --no-auto-commits
 
-# 7. (Optional) If pointing explicitly to a local Ollama server
-#    Uncomment and edit host/port if different
-# aider --provider ollama --model qwen3-coder-next --host 127.0.0.1 --port 11434 --yes-always --no-auto-commits
-
-# 8. When done, deactivate the virtual environment
+# 7. When done with your session, deactivate the virtual environment (or just close the terminal)
 deactivate
+
+# 8. (Optional) Delete the virtual environment
+rmdir /s /q "%USERPROFILE%\venvs\aider"
