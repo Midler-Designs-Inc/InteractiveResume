@@ -1,14 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
-  css: [
-    '~/assets/scss/main.scss'
-  ],
-  css: [
-    'bootstrap/dist/css/bootstrap.min.css'
-  ],
-  build: {
-    transpile: ['@popperjs/core']
-  }
+    compatibilityDate: '2025-07-15',
+    devtools: { enabled: true },
+    css: [
+        '~/assets/scss/main.scss'
+    ],
+    build: {
+        transpile: ['@popperjs/core']
+    },
+    vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    api: 'modern-compiler',
+                    silenceDeprecations: ['color-functions', 'global-builtin', 'import'],
+                    quietDeps: true,
+                }
+            }
+        }
+    }
 })
