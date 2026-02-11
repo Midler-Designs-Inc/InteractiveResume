@@ -1,60 +1,7 @@
 
 <template>
   <div class="portfolio-bg py-5 px-3 px-md-4">
-    <!-- Hero + AI Avatar Section - Combined Row -->
-    <section class="mb-5 position-relative">
-      <div class="row g-4 align-items-center">
-        <!-- Left Column: Hero Content -->
-        <div class="col-lg-6">
-          <h1 class="display-2 fw-bold mb-3 text-gradient-primary tracking-widest hero-title-animated">
-            SOFTWARE ENGINEER
-          </h1>
-          <p class="text-muted mb-4 lh-lg">
-            Welcome to my interactive AI-powered portfolio. Explore my expertise in full-stack development,
-            cloud architecture, and innovative solutions.
-          </p>
-
-          <div class="d-flex gap-4 flex-wrap">
-            <div class="text-center">
-              <div class="icon-container icon-pulse d-flex align-items-center justify-content-center mx-auto mb-2 rounded-3 fs-3">
-                💼
-              </div>
-              <p class="text-uppercase text-muted small mb-1 tracking-wide fs-7">Business Owner</p>
-              <p class="fw-semibold mb-0 text-gradient-secondary fs-6">Software Engineering</p>
-            </div>
-            <div class="text-center">
-              <div class="icon-container icon-pulse d-flex align-items-center justify-content-center mx-auto mb-2 rounded-3 fs-3">
-                🚀
-              </div>
-              <p class="text-uppercase text-muted small mb-1 tracking-wide fs-7">Projects</p>
-              <p class="fw-semibold mb-0 text-gradient-secondary fs-6">50+ Solutions</p>
-            </div>
-            <div class="text-center">
-              <div class="icon-container icon-pulse d-flex align-items-center justify-content-center mx-auto mb-2 rounded-3 fs-3">
-                ⚡
-              </div>
-              <p class="text-uppercase text-muted small mb-1 tracking-wide fs-7">Experience</p>
-              <p class="fw-semibold mb-0 text-gradient-secondary fs-6">8+ Years</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: AI Avatar -->
-        <div class="col-lg-6">
-          <div class="d-flex justify-content-center position-relative">
-            <div class="avatar-container position-relative mx-auto">
-              <div class="avatar-ring position-absolute top-0 start-0 w-100 h-100 rounded-circle"></div>
-              <div class="avatar-ring-middle position-absolute top-50 start-50 translate-middle rounded-circle w-88 h-88"></div>
-              <div class="avatar-ring-inner position-absolute top-50 start-50 translate-middle rounded-circle w-76 h-76"></div>
-              <div class="avatar-crosshair position-absolute top-0 start-0 w-100 h-100"></div>
-              <div class="avatar-content position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center justify-content-center fs-1">
-                🤖
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <ai-chat-header/>
 
     <!-- Dashboard Grid -->
     <div class="container-fluid px-3">
@@ -160,73 +107,73 @@
 </template>
 
 <script>
-export default {
-  name: 'PortfolioComponent',
-  data() {
-    return {
-      skills: [
-        { name: 'JavaScript / TypeScript', tech: 'React, Node.js, Next.js', level: 95 },
-        { name: 'Python', tech: 'Django, Flask, FastAPI', level: 90 },
-        { name: 'Cloud Architecture', tech: 'AWS, Azure, GCP', level: 88 },
-        { name: 'Database Design', tech: 'PostgreSQL, MongoDB', level: 85 },
-        { name: 'DevOps / CI/CD', tech: 'Docker, Kubernetes', level: 92 },
-        { name: 'UI/UX Design', tech: 'Figma, Design Systems', level: 87 }
-      ],
-      workHistory: [
-        {
-          icon: '👔',
-          title: 'Owner & Lead Developer',
-          company: 'Custom Software Engineering Firm',
-          description: 'Building custom solutions for clients across industries',
-          duration: '2017 - Present'
-        },
-        {
-          icon: '💻',
-          title: 'Senior Full-Stack Developer',
-          company: 'Tech Startup',
-          description: 'Led development of scalable web applications',
-          duration: '2015 - 2017'
-        },
-        {
-          icon: '🎯',
-          title: 'Software Developer',
-          company: 'Digital Agency',
-          description: 'Developed client websites and applications',
-          duration: '2013 - 2015'
-        }
-      ],
-      projects: [
-        {
-          icon: '🏢',
-          title: 'Enterprise Dashboard',
-          description: 'Real-time analytics platform for Fortune 500 company with custom data visualization and reporting.',
-          tags: ['React', 'Node.js', 'AWS']
-        },
-        {
-          icon: '🛒',
-          title: 'E-Commerce Platform',
-          description: 'Scalable online marketplace with payment integration, inventory management, and AI recommendations.',
-          tags: ['Next.js', 'PostgreSQL', 'Stripe']
-        },
-        {
-          icon: '🤖',
-          title: 'AI Chatbot System',
-          description: 'Custom AI-powered customer service solution with natural language processing and multi-channel support.',
-          tags: ['Python', 'OpenAI', 'FastAPI']
-        },
-        {
-          icon: '📱',
-          title: 'Mobile App Suite',
-          description: 'Cross-platform mobile application for healthcare tracking with real-time sync and offline support.',
-          tags: ['React Native', 'Firebase', 'iOS/Android']
-        }
-      ],
-      contacts: [
-        { icon: '✉️', type: 'Email', value: 'contact@example.com' },
-        { icon: '💼', type: 'LinkedIn', value: '/in/yourprofile' },
-        { icon: '🐙', type: 'GitHub', value: '@yourusername' }
-      ]
+  export default {
+    name: 'PortfolioComponent',
+    data() {
+      return {
+        skills: [
+          { name: 'JavaScript / TypeScript', tech: 'React, Node.js, Next.js', level: 95 },
+          { name: 'Python', tech: 'Django, Flask, FastAPI', level: 90 },
+          { name: 'Cloud Architecture', tech: 'AWS, Azure, GCP', level: 88 },
+          { name: 'Database Design', tech: 'PostgreSQL, MongoDB', level: 85 },
+          { name: 'DevOps / CI/CD', tech: 'Docker, Kubernetes', level: 92 },
+          { name: 'UI/UX Design', tech: 'Figma, Design Systems', level: 87 }
+        ],
+        workHistory: [
+          {
+            icon: '👔',
+            title: 'Owner & Lead Developer',
+            company: 'Custom Software Engineering Firm',
+            description: 'Building custom solutions for clients across industries',
+            duration: '2017 - Present'
+          },
+          {
+            icon: '💻',
+            title: 'Senior Full-Stack Developer',
+            company: 'Tech Startup',
+            description: 'Led development of scalable web applications',
+            duration: '2015 - 2017'
+          },
+          {
+            icon: '🎯',
+            title: 'Software Developer',
+            company: 'Digital Agency',
+            description: 'Developed client websites and applications',
+            duration: '2013 - 2015'
+          }
+        ],
+        projects: [
+          {
+            icon: '🏢',
+            title: 'Enterprise Dashboard',
+            description: 'Real-time analytics platform for Fortune 500 company with custom data visualization and reporting.',
+            tags: ['React', 'Node.js', 'AWS']
+          },
+          {
+            icon: '🛒',
+            title: 'E-Commerce Platform',
+            description: 'Scalable online marketplace with payment integration, inventory management, and AI recommendations.',
+            tags: ['Next.js', 'PostgreSQL', 'Stripe']
+          },
+          {
+            icon: '🤖',
+            title: 'AI Chatbot System',
+            description: 'Custom AI-powered customer service solution with natural language processing and multi-channel support.',
+            tags: ['Python', 'OpenAI', 'FastAPI']
+          },
+          {
+            icon: '📱',
+            title: 'Mobile App Suite',
+            description: 'Cross-platform mobile application for healthcare tracking with real-time sync and offline support.',
+            tags: ['React Native', 'Firebase', 'iOS/Android']
+          }
+        ],
+        contacts: [
+          { icon: '✉️', type: 'Email', value: 'contact@example.com' },
+          { icon: '💼', type: 'LinkedIn', value: '/in/yourprofile' },
+          { icon: '🐙', type: 'GitHub', value: '@yourusername' }
+        ]
+      }
     }
   }
-}
 </script>
