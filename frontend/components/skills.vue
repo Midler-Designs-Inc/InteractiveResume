@@ -7,12 +7,12 @@
       </a>
     </div>
     <div class="row g-3">
-      <div class="col-md-6 col-12" v-for="skill in skills" :key="skill.name">
+      <div class="col-md-6 col-12" v-for="category in Object.values(skillsMap)" :key="category.name">
         <div class="skill-item border rounded-3 p-3 position-relative overflow-hidden">
-          <span class="position-absolute top-0 end-0 m-3 small fw-semibold text-purple-primary">{{ skill.years }} years</span>
-          <h3 class="fs-6 mb-2 text-white">{{ skill.name }}</h3>
-          <p class="text-muted small mb-0">{{ skill.tech }}</p>
-          <div class="skill-progress position-absolute bottom-0 start-0" :style="{ width: skill.progress + '%' }"></div>
+          <span class="position-absolute top-0 end-0 m-3 small fw-semibold text-purple-primary">{{ category.totalYears }} years</span>
+          <h3 class="fs-6 mb-2 text-white">{{ category.name }}</h3>
+          <p class="text-muted small mb-0">{{ category.skills.join(", ") }}</p>
+          <div class="skill-progress position-absolute bottom-0 start-0" :style="{ width: category.proficiencyAverage * 20 + '%' }"></div>
         </div>
       </div>
     </div>
@@ -22,16 +22,64 @@
 <script>
   export default {
     name: "skills",
+    async mounted () {
+      // Fetch skill categories and existing skill responses from API
+      const promises = [
+        $fetch('/api/skills', {
+          method: 'GET',
+          query: {
+            searchClause: {
+              years: { $gt: 0 },
+              proficiency: { $gt: 0 }
+            }
+          }
+        })
+      ];
+      const results = await Promise.all(promises);
+
+      // assign the returned data to the appropriate variables
+      this.skills = results[0].data;
+    },
     data () {
       return {
-        skills: [
-          { name: 'JavaScript / TypeScript', tech: 'React, Node.js, Next.js', years: 7, experience: 'advanced', progress: 80 },
-          { name: 'Python', tech: 'Django, Flask, FastAPI', years: 6, experience: 'proficient', progress: 60 },
-          { name: 'Cloud Architecture', tech: 'AWS, Azure, GCP', years: 5, experience: 'proficient', progress: 60 },
-          { name: 'Database Design', tech: 'PostgreSQL, MongoDB', years: 5, experience: 'proficient', progress: 60 },
-          { name: 'DevOps / CI/CD', tech: 'Docker, Kubernetes', years: 6, experience: 'advanced', progress: 80 },
-          { name: 'UI/UX Design', tech: 'Figma, Design Systems', years: 4, experience: 'working_knowledge', progress: 40 }
-        ],
+        skills: [],
+      }
+    },
+    computed: {
+      skillsMap () {
+        // create an empty skills map object
+        const skillsMap = {};
+
+        // iterate over all skills and group them by category
+        for (const skill of this.skills) {
+          // add a category if it doesn't exist yet
+          if (!skillsMap[skill.category]) skillsMap[skill.category] = {
+            name: skill.category,
+            skills: [],
+            totalYears: 0,
+            proficiencyTotal: 0,
+            proficiencyCount: 0
+          };
+
+          // add skill to the category
+          skillsMap[skill.category].skills.push(skill.technology);
+
+          // set the highest years of experience for the category
+          skillsMap[skill.category].totalYears = skill.years > skillsMap[skill.category].totalYears
+              ? skill.years : skillsMap[skill.category].totalYears;
+
+          // update proficiency totals
+          skillsMap[skill.category].proficiencyTotal += skill.proficiency;
+          skillsMap[skill.category].proficiencyCount++;
+        }
+
+        // calculate the average proficiency for each category
+        for (const category of Object.values(skillsMap)) {
+          category.proficiencyAverage = Math.round(category.proficiencyTotal / category.proficiencyCount);
+        }
+
+        // return the skills map
+        return skillsMap;
       }
     }
   }

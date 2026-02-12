@@ -19,8 +19,12 @@ export default defineEventHandler(async (event) => {
 
         // Handle GET and POST requests based on method
         if (event.method === 'GET') {
+            // get the params from the URL query string
+            const query = getQuery(event);
+            const searchClause = query.searchClause ? JSON.parse(query.searchClause) : {};
+
             // Fetch all skills from the database
-            const skills = await collection.find({}).toArray();
+            const skills = await collection.find(searchClause).toArray();
 
             // Return success response with skills data
             return { success: true, data: skills };
@@ -36,7 +40,7 @@ export default defineEventHandler(async (event) => {
         }
     } catch (err) {
         // output error to console and throw a 500 error
-        console.error('Error in skills API:', err);
+        console.error('Error in API:', err);
         throw createError({statusCode: 500, statusMessage: err.message || 'Internal Server Error' });
     }
 })
