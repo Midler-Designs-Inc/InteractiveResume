@@ -49,8 +49,9 @@
             <textarea
               class="form-control rounded-3 shadow-sm bg-card text-white border-purple"
               rows="5"
+              style="resize: none;"
               placeholder="Type your question or message here..."
-            ></textarea>
+            />
             <div class="d-flex justify-content-end">
               <button class="btn btn-purple-outline rounded-pill px-4 fw-semibold">
                 Submit

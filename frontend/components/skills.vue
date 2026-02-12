@@ -9,10 +9,10 @@
     <div class="row g-3">
       <div class="col-md-6 col-12" v-for="skill in skills" :key="skill.name">
         <div class="skill-item border rounded-3 p-3 position-relative overflow-hidden">
-          <span class="position-absolute top-0 end-0 m-3 small fw-semibold text-purple-primary">{{ skill.level }}%</span>
+          <span class="position-absolute top-0 end-0 m-3 small fw-semibold text-purple-primary">{{ skill.years }} years</span>
           <h3 class="fs-6 mb-2 text-white">{{ skill.name }}</h3>
           <p class="text-muted small mb-0">{{ skill.tech }}</p>
-          <div class="skill-progress position-absolute bottom-0 start-0" :style="{ width: skill.level + '%' }"></div>
+          <div class="skill-progress position-absolute bottom-0 start-0" :style="{ width: skill.progress + '%' }"></div>
         </div>
       </div>
     </div>
@@ -25,12 +25,12 @@
     data () {
       return {
         skills: [
-          { name: 'JavaScript / TypeScript', tech: 'React, Node.js, Next.js', level: 95 },
-          { name: 'Python', tech: 'Django, Flask, FastAPI', level: 90 },
-          { name: 'Cloud Architecture', tech: 'AWS, Azure, GCP', level: 88 },
-          { name: 'Database Design', tech: 'PostgreSQL, MongoDB', level: 85 },
-          { name: 'DevOps / CI/CD', tech: 'Docker, Kubernetes', level: 92 },
-          { name: 'UI/UX Design', tech: 'Figma, Design Systems', level: 87 }
+          { name: 'JavaScript / TypeScript', tech: 'React, Node.js, Next.js', years: 7, experience: 'advanced', progress: 80 },
+          { name: 'Python', tech: 'Django, Flask, FastAPI', years: 6, experience: 'proficient', progress: 60 },
+          { name: 'Cloud Architecture', tech: 'AWS, Azure, GCP', years: 5, experience: 'proficient', progress: 60 },
+          { name: 'Database Design', tech: 'PostgreSQL, MongoDB', years: 5, experience: 'proficient', progress: 60 },
+          { name: 'DevOps / CI/CD', tech: 'Docker, Kubernetes', years: 6, experience: 'advanced', progress: 80 },
+          { name: 'UI/UX Design', tech: 'Figma, Design Systems', years: 4, experience: 'working_knowledge', progress: 40 }
         ],
       }
     }

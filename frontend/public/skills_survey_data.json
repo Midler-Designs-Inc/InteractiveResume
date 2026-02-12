@@ -1,0 +1,893 @@
+{
+  "Frontend Engineering": {
+    "technologies": {
+      "HTML": {
+        "years": 27,
+        "proficiency": 4
+      },
+      "CSS": {
+        "years": 27,
+        "proficiency": 3
+      },
+      "JavaScript": {
+        "years": 25,
+        "proficiency": 4
+      },
+      "TypeScript": {
+        "years": 0,
+        "proficiency": 1
+      },
+      "React": {
+        "years": 0,
+        "proficiency": 1
+      },
+      "Next.js": {
+        "years": 0,
+        "proficiency": 1
+      },
+      "Vue": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "Nuxt": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "jQuery": {
+        "years": 5,
+        "proficiency": 4
+      },
+      "Bootstrap": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "Tailwind CSS": {
+        "years": 0,
+        "proficiency": 3
+      },
+      "SASS / SCSS": {
+        "years": 1,
+        "proficiency": 2
+      },
+      "CSS Modules": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Styled Components": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "Web Components": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "Vite": {
+        "years": 2,
+        "proficiency": 2
+      },
+      "Webpack": {
+        "years": 7,
+        "proficiency": 3
+      },
+      "Parcel": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "npm": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "Yarn": {
+        "years": 0,
+        "proficiency": 2
+      },
+      "pnpm": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Frontend Performance Optimization": {
+        "years": 9,
+        "proficiency": 3
+      },
+      "Accessibility (a11y)": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Responsive Design": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "Cross-Browser Compatibility": {
+        "years": 20,
+        "proficiency": 4
+      }
+    },
+    "overall_years": 0
+  },
+  "Backend Engineering / APIs": {
+    "technologies": {
+      "Node.js": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "Python": {
+        "years": 1,
+        "proficiency": 3
+      },
+      "PHP": {
+        "years": 4,
+        "proficiency": 3
+      },
+      "Ruby": {
+        "years": 0,
+        "proficiency": 1
+      },
+      "Java": {
+        "years": 0,
+        "proficiency": 1
+      },
+      "C#": {
+        "years": 0,
+        "proficiency": 2
+      },
+      "C": {
+        "years": 1,
+        "proficiency": 2
+      },
+      "C++": {
+        "years": 2,
+        "proficiency": 2
+      },
+      "Lua": {
+        "years": 1,
+        "proficiency": 3
+      },
+      "FastAPI": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Flask": {
+        "years": 0,
+        "proficiency": 1
+      },
+      "Django": {
+        "years": 1,
+        "proficiency": 2
+      },
+      "Express.js": {
+        "years": 5,
+        "proficiency": 4
+      },
+      "MoleculerJS": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "REST APIs": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "GraphQL": {
+        "years": 0,
+        "proficiency": 1
+      },
+      "gRPC": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "WebSockets": {
+        "years": 1,
+        "proficiency": 2
+      },
+      "Microservices Architecture": {
+        "years": 9,
+        "proficiency": 3
+      },
+      "Monolith Architecture": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "API Versioning": {
+        "years": 0,
+        "proficiency": 2
+      },
+      "API Integrations": {
+        "years": 9,
+        "proficiency": 5
+      }
+    },
+    "overall_years": 0
+  },
+  "Mobile Application Development": {
+    "technologies": {
+      "React Native": {
+        "years": 0,
+        "proficiency": 2
+      },
+      "Expo": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Cordova / PhoneGap": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Capacitor": {
+        "years": 2,
+        "proficiency": 3
+      },
+      "Progressive Web Apps (PWA)": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "Android App Architecture": {
+        "years": 2,
+        "proficiency": 3
+      },
+      "iOS App Architecture": {
+        "years": 0,
+        "proficiency": 2
+      },
+      "Mobile UI/UX Design": {
+        "years": 15,
+        "proficiency": 4
+      },
+      "Mobile Performance Optimization": {
+        "years": 6,
+        "proficiency": 3
+      }
+    },
+    "overall_years": 0
+  },
+  "Desktop Application Development": {
+    "technologies": {
+      "C# / .NET": {
+        "years": 0,
+        "proficiency": 1
+      },
+      "WinForms": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "WPF": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Electron": {
+        "years": 1,
+        "proficiency": 4
+      },
+      "Native Windows Development": {
+        "years": 1,
+        "proficiency": 2
+      },
+      "Cross-Platform Desktop Apps": {
+        "years": 1,
+        "proficiency": 3
+      },
+      "Installer / Packaging Systems": {
+        "years": 1,
+        "proficiency": 3
+      }
+    },
+    "overall_years": 0
+  },
+  "Cloud & Infrastructure": {
+    "technologies": {
+      "AWS": {
+        "years": 2,
+        "proficiency": 3
+      },
+      "Azure": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "GCP": {
+        "years": 3,
+        "proficiency": 3
+      },
+      "Linux": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "Debian": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "Ubuntu": {
+        "years": 0,
+        "proficiency": 1
+      },
+      "Server Provisioning": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "Virtual Machines": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "Load Balancing": {
+        "years": 1,
+        "proficiency": 2
+      },
+      "Auto Scaling": {
+        "years": 1,
+        "proficiency": 2
+      },
+      "High Availability": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Disaster Recovery": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Cloud Networking": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Cloud Security": {
+        "years": 0,
+        "proficiency": 0
+      }
+    },
+    "overall_years": 0
+  },
+  "DevOps & Platform Engineering": {
+    "technologies": {
+      "Docker": {
+        "years": 5,
+        "proficiency": 4
+      },
+      "Docker Compose": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Kubernetes": {
+        "years": 1,
+        "proficiency": 2
+      },
+      "CI/CD Pipelines": {
+        "years": 3,
+        "proficiency": 3
+      },
+      "Automated Deployments": {
+        "years": 3,
+        "proficiency": 3
+      },
+      "Infrastructure as Code": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Git": {
+        "years": 10,
+        "proficiency": 4
+      },
+      "GitHub Actions": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "GitLab CI": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Monitoring & Logging": {
+        "years": 3,
+        "proficiency": 3
+      },
+      "Environment Management": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Secrets Management": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "Release Management": {
+        "years": 9,
+        "proficiency": 4
+      }
+    },
+    "overall_years": 0
+  },
+  "Databases & Persistence": {
+    "technologies": {
+      "PostgreSQL": {
+        "years": 2,
+        "proficiency": 4
+      },
+      "MySQL": {
+        "years": 5,
+        "proficiency": 4
+      },
+      "MongoDB": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "SQL": {
+        "years": 10,
+        "proficiency": 4
+      },
+      "NoSQL": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "Database Design": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "Schema Design": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "Indexing": {
+        "years": 20,
+        "proficiency": 3
+      },
+      "Query Optimization": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "Migrations": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "Multi-Tenant Databases": {
+        "years": 3,
+        "proficiency": 4
+      },
+      "Data Integrity": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "Backups & Recovery": {
+        "years": 20,
+        "proficiency": 4
+      }
+    },
+    "overall_years": 0
+  },
+  "Messaging, Events & Integration": {
+    "technologies": {
+      "RabbitMQ": {
+        "years": 1,
+        "proficiency": 2
+      },
+      "Message Brokers": {
+        "years": 2,
+        "proficiency": 3
+      },
+      "Event Buses": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "Publish/Subscribe Patterns": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "Queue-Based Processing": {
+        "years": 1,
+        "proficiency": 3
+      },
+      "Webhook Systems": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "Asynchronous Processing": {
+        "years": 15,
+        "proficiency": 4
+      },
+      "Distributed Systems Concepts": {
+        "years": 9,
+        "proficiency": 4
+      }
+    },
+    "overall_years": 0
+  },
+  "Security & Identity": {
+    "technologies": {
+      "OAuth": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "OAuth2 Flows": {
+        "years": 4,
+        "proficiency": 3
+      },
+      "SSO Integrations": {
+        "years": 4,
+        "proficiency": 4
+      },
+      "JWT": {
+        "years": 9,
+        "proficiency": 3
+      },
+      "Role-Based Access Control (RBAC)": {
+        "years": 4,
+        "proficiency": 4
+      },
+      "API Security": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "Secure Credential Storage": {
+        "years": 20,
+        "proficiency": 4
+      },
+      "HIPAA Compliance": {
+        "years": 4,
+        "proficiency": 3
+      },
+      "Regulatory Compliance": {
+        "years": 6,
+        "proficiency": 3
+      },
+      "Audit Logging": {
+        "years": 9,
+        "proficiency": 4
+      }
+    },
+    "overall_years": 0
+  },
+  "Testing & Quality Engineering": {
+    "technologies": {
+      "Mocha": {
+        "years": 2,
+        "proficiency": 3
+      },
+      "Selenium": {
+        "years": 2,
+        "proficiency": 3
+      },
+      "Nightwatch": {
+        "years": 2,
+        "proficiency": 3
+      },
+      "Unit Testing": {
+        "years": 3,
+        "proficiency": 4
+      },
+      "Integration Testing": {
+        "years": 3,
+        "proficiency": 4
+      },
+      "End-to-End Testing": {
+        "years": 3,
+        "proficiency": 4
+      },
+      "Test Automation": {
+        "years": 2,
+        "proficiency": 3
+      },
+      "Test Data Management": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Regression Testing": {
+        "years": 0,
+        "proficiency": 0
+      }
+    },
+    "overall_years": 0
+  },
+  "UI/UX & Product Design": {
+    "technologies": {
+      "UI Design": {
+        "years": 27,
+        "proficiency": 5
+      },
+      "UX Design": {
+        "years": 27,
+        "proficiency": 5
+      },
+      "Design Systems": {
+        "years": 27,
+        "proficiency": 4
+      },
+      "Wireframing": {
+        "years": 27,
+        "proficiency": 5
+      },
+      "Prototyping": {
+        "years": 27,
+        "proficiency": 5
+      },
+      "User Flows": {
+        "years": 27,
+        "proficiency": 5
+      },
+      "Accessibility Design": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Visual Consistency": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Photoshop": {
+        "years": 20,
+        "proficiency": 4
+      }
+    },
+    "overall_years": 0
+  },
+  "Game Development & Interactive Media": {
+    "technologies": {
+      "Unity": {
+        "years": 0,
+        "proficiency": 2
+      },
+      "Unreal Engine": {
+        "years": 2,
+        "proficiency": 3
+      },
+      "Godot": {
+        "years": 0,
+        "proficiency": 2
+      },
+      "Valve Hammer Editor": {
+        "years": 2,
+        "proficiency": 4
+      },
+      "RPG Toolkit": {
+        "years": 3,
+        "proficiency": 4
+      },
+      "Game Design": {
+        "years": 27,
+        "proficiency": 4
+      },
+      "Game Development": {
+        "years": 27,
+        "proficiency": 4
+      },
+      "Physics Systems": {
+        "years": 4,
+        "proficiency": 3
+      },
+      "Scripting Engines": {
+        "years": 27,
+        "proficiency": 4
+      },
+      "Flash": {
+        "years": 4,
+        "proficiency": 4
+      },
+      "Corona SDK": {
+        "years": 1,
+        "proficiency": 3
+      }
+    },
+    "overall_years": 0
+  },
+  "3D, AR, VR & Simulation": {
+    "technologies": {
+      "Blender": {
+        "years": 0,
+        "proficiency": 2
+      },
+      "3D Modeling": {
+        "years": 2,
+        "proficiency": 2
+      },
+      "VR Application Development": {
+        "years": 1,
+        "proficiency": 3
+      },
+      "AR Application Development": {
+        "years": 1,
+        "proficiency": 3
+      },
+      "Simulation Systems": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Real-Time Rendering": {
+        "years": 0,
+        "proficiency": 0
+      }
+    },
+    "overall_years": 0
+  },
+  "AI & Applied Machine Learning": {
+    "technologies": {
+      "AI Model Integration": {
+        "years": 2,
+        "proficiency": 3
+      },
+      "Local AI Models": {
+        "years": 2,
+        "proficiency": 3
+      },
+      "AI Agent Systems": {
+        "years": 1,
+        "proficiency": 2
+      },
+      "AI API Integrations": {
+        "years": 1,
+        "proficiency": 2
+      },
+      "AI-Assisted Content Generation": {
+        "years": 2,
+        "proficiency": 4
+      },
+      "Model Evaluation & Benchmarking": {
+        "years": 1,
+        "proficiency": 2
+      },
+      "Human-in-the-Loop Training": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Prompt Engineering": {
+        "years": 2,
+        "proficiency": 4
+      }
+    },
+    "overall_years": 0
+  },
+  "Enterprise Systems & Platforms": {
+    "technologies": {
+      "Salesforce": {
+        "years": 3,
+        "proficiency": 3
+      },
+      "Enterprise Integrations": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "CRM Systems": {
+        "years": 10,
+        "proficiency": 4
+      },
+      "ERP Concepts": {
+        "years": 2,
+        "proficiency": 3
+      },
+      "Electronic Records Systems": {
+        "years": 2,
+        "proficiency": 3
+      },
+      "Vendor APIs": {
+        "years": 3,
+        "proficiency": 4
+      },
+      "Multi-Tenant SaaS Architecture": {
+        "years": 4,
+        "proficiency": 3
+      }
+    },
+    "overall_years": 0
+  },
+  "Telephony & Communications": {
+    "technologies": {
+      "Twilio": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Digital Call Centers": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Softphone Systems": {
+        "years": 2,
+        "proficiency": 4
+      },
+      "SMS Integrations": {
+        "years": 3,
+        "proficiency": 4
+      },
+      "Email Integrations": {
+        "years": 3,
+        "proficiency": 4
+      },
+      "SendGrid": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Real-Time Communications APIs": {
+        "years": 3,
+        "proficiency": 3
+      }
+    },
+    "overall_years": 0
+  },
+  "Hardware, Robotics & IoT": {
+    "technologies": {
+      "Hardware Integration": {
+        "years": 3,
+        "proficiency": 3
+      },
+      "Robotics": {
+        "years": 0,
+        "proficiency": 2
+      },
+      "Embedded Systems Concepts": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Device Communication": {
+        "years": 0,
+        "proficiency": 2
+      },
+      "Sensor Integration": {
+        "years": 1,
+        "proficiency": 2
+      }
+    },
+    "overall_years": 0
+  },
+  "Product, Project & Delivery": {
+    "technologies": {
+      "Business Requirements Analysis": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "Functional Requirements": {
+        "years": 20,
+        "proficiency": 5
+      },
+      "Technical Documentation": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "Business Documentation": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "Project Management": {
+        "years": 27,
+        "proficiency": 5
+      },
+      "Agile": {
+        "years": 4,
+        "proficiency": 4
+      },
+      "Scrum": {
+        "years": 4,
+        "proficiency": 4
+      },
+      "Client Discovery": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "Stakeholder Communication": {
+        "years": 9,
+        "proficiency": 4
+      },
+      "End-to-End Delivery": {
+        "years": 9,
+        "proficiency": 5
+      }
+    },
+    "overall_years": 0
+  },
+  "Operations & Business Ownership": {
+    "technologies": {
+      "Client Acquisition": {
+        "years": 6,
+        "proficiency": 2
+      },
+      "Business Operations": {
+        "years": 6,
+        "proficiency": 4
+      },
+      "System Ownership": {
+        "years": 6,
+        "proficiency": 5
+      },
+      "Solo Full-Stack Delivery": {
+        "years": 0,
+        "proficiency": 0
+      },
+      "Cost Optimization": {
+        "years": 6,
+        "proficiency": 4
+      },
+      "Long-Term System Maintenance": {
+        "years": 4,
+        "proficiency": 4
+      }
+    },
+    "overall_years": 0
+  }
+}
