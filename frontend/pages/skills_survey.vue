@@ -10,7 +10,7 @@
     </div>
 
     <div v-else class="row">
-      <div v-for="(category, categoryName) in filteredSkillCategories" :key="categoryName" class="col-12 mb-4">
+      <div v-for="(category, categoryName) in skillCategories" :key="categoryName" class="col-12 mb-4">
         <div class="card glass-card h-100">
           <div class="card-header bg-card border-purple">
             <h2 class="h5 mb-0 text-purple-primary">{{ categoryName }}</h2>
@@ -355,25 +355,6 @@
         },
         loading: true,
         error: null
-      }
-    },
-    computed: {
-      filteredSkillCategories () {
-        const filtered = {}
-        for (const [categoryName, category] of Object.entries(this.skillCategories)) {
-          const technologies = category.technologies.filter(tech => {
-            const entry = this.model[categoryName]?.technologies[tech]
-            if (!entry) return false
-            return entry.years > 0 || entry.proficiency > 0
-          })
-          if (technologies.length > 0) {
-            filtered[categoryName] = {
-              ...category,
-              technologies
-            }
-          }
-        }
-        return filtered
       }
     },
     async mounted () {
