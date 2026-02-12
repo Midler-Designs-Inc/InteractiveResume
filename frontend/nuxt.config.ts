@@ -4,7 +4,6 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     css: [
         '~/assets/scss/purple.scss',
-        '@fortawesome/fontawesome-free/css/all.min.css'
     ],
     build: {
         transpile: ['@popperjs/core']
