@@ -13,16 +13,28 @@
       <div v-for="(category, categoryName) in skillCategories" :key="categoryName" class="col-12 mb-4">
         <div class="card glass-card h-100">
           <div class="card-header bg-card border-purple">
-            <h2 class="h5 mb-0 text-purple-primary">{{ categoryName }}</h2>
+            <h2 class="h5 mb-0 text-purple-primary d-flex align-items-center justify-content-between gap-3 py-3 px-4">
+              {{ categoryName }}
+              <span class="w-auto d-flex align-items-center gap-2">
+                <label class="form-label text-muted small">Sort Order</label>
+                <input
+                    type="number"
+                    class="form-control form-control-sm w-auto"
+                    style="width: 75px !important;"
+                    :value="model[categoryName].technologies[Object.keys(model[categoryName].technologies)[0]].categorySort"
+                    @change="updateCategorySort(categoryName, $event.target.value)"
+                />
+              </span>
+            </h2>
           </div>
           <div class="card-body">
             <p class="card-text category-description text-muted mb-4">{{ category.description }}</p>
 
             <div v-for="tech in category.technologies" :key="tech" class="row g-3 mb-3 p-3 bg-overlay-light">
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <h3 class="h6 text-purple-primary mb-0">{{ tech }}</h3>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <label class="form-label text-muted small">Years of Experience</label>
                 <input
                   type="number"
@@ -32,7 +44,7 @@
                   @input="updateModel(categoryName, tech, 'years', $event.target.value)"
                 />
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <label class="form-label text-muted small">Proficiency (1-5)</label>
                 <input
                   type="number"
@@ -43,11 +55,29 @@
                   @input="updateModel(categoryName, tech, 'proficiency', $event.target.value)"
                 />
               </div>
+              <div class="col-md-3 d-flex flex-column align-items-center justify-content-start">
+                <label class="form-check-label text-muted small">Hide Skill</label>
+                <div class="form-check form-switch form-switch-lg my-auto form-check-reverse">
+                  <input
+                      class="form-check-input"
+                      type="checkbox"
+                      v-model="model[categoryName].technologies[tech].hide"
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <button
+      v-if="!loading"
+      class="btn bg-gradient-purple btn-float-save"
+      @click="saveToApi"
+    >
+      Save
+    </button>
   </div>
 </template>
 
@@ -81,7 +111,7 @@
 
         // Populate model with existing skill responses
         for (const skill of results[1].data)
-          this.model[skill.category].technologies[skill.technology] = skill;
+          this.model[skill.category].technologies[skill.technology] = {categorySort: 0, ...skill};
       } catch (err) {
         // If API fails, start with empty model
         this.model = {}
@@ -108,7 +138,9 @@
             if (!this.model[categoryName].technologies[tech]) {
               this.model[categoryName].technologies[tech] = {
                 years: 0,
-                proficiency: 0
+                proficiency: 0,
+                hide: false,
+                categorySort: 0
               }
             }
           }
@@ -121,7 +153,7 @@
 
         // Ensure technology object exists
         if (!this.model[categoryName].technologies[tech])
-          this.model[categoryName].technologies[tech] = { years: 0, proficiency: 0 }
+          this.model[categoryName].technologies[tech] = { years: 0, proficiency: 0, hide: false }
 
         // Update field
         this.model[categoryName].technologies[tech][field] = parseInt(value, 10) || 0;
@@ -137,7 +169,9 @@
                   category: categoryName,
                   technology: tech,
                   years: entry.years,
-                  proficiency: entry.proficiency
+                  proficiency: entry.proficiency,
+                  hide: entry.hide,
+                  categorySort: entry.categorySort
                 })
               }
             }
@@ -153,7 +187,36 @@
         } catch (err) {
           console.error('Failed to save data:', err)
         }
+      },
+      updateCategorySort(categoryName, value) {
+        for (const tech of Object.keys(this.model[categoryName].technologies)) {
+          this.model[categoryName].technologies[tech].categorySort = parseInt(value, 10) || 0;
+        }
       }
-    }
+    },
   }
 </script>
+
+<style scoped>
+  .btn-float-save {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(106, 13, 173, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .btn-float-save:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(106, 13, 173, 0.4);
+  }
+
+  .btn-float-save:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(106, 13, 173, 0.3);
+  }
+</style>

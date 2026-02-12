@@ -396,3 +396,47 @@ $text-muted: rgba(255, 255, 255, 0.5);
     font-size: 3.75rem;
   }
 }
+
+// Switch container
+.form-check.form-switch {
+  .form-check-input {
+    width: 2.5rem;
+    height: 1.25rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 1.25rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:checked {
+      background-color: rgba(139, 92, 246, 0.3);
+      border-color: rgba(139, 92, 246, 0.5);
+
+      &:before {
+        transform: translate(1.25rem, -50%);
+        background: linear-gradient(135deg, $accent-purple, $secondary-purple);
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
+    }
+  }
+
+  // Label styling
+  .form-check-label {
+    color: $body-color;
+    margin-left: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+
+    // Optional gradient label
+    &.text-gradient {
+      background: linear-gradient(135deg, $primary-purple, $secondary-purple);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+}

@@ -11,8 +11,12 @@
         <div class="skill-item border rounded-3 p-3 position-relative overflow-hidden">
           <span class="position-absolute top-0 end-0 m-3 small fw-semibold text-purple-primary">{{ category.totalYears }} years</span>
           <h3 class="fs-6 mb-2 text-white">{{ category.name }}</h3>
-          <p class="text-muted small mb-0">{{ category.skills.join(", ") }}</p>
-          <div class="skill-progress position-absolute bottom-0 start-0" :style="{ width: category.proficiencyAverage * 20 + '%' }"></div>
+          <p class="text-secondary small mb-0">
+            <span v-for="(skill, i) in category.skills" :key="skill" class="text-nowrap">
+              {{ skill }}<span v-if="i < category.skills.length - 1" class="mx-1">&bullet;</span>
+            </span>
+          </p>
+<!--          <div class="skill-progress position-absolute bottom-0 start-0" :style="{ width: category.proficiencyAverage * 20 + '%' }"></div>-->
         </div>
       </div>
     </div>
@@ -52,6 +56,9 @@
 
         // iterate over all skills and group them by category
         for (const skill of this.skills) {
+          // skip hidden skills
+          if (skill.hide) continue;
+
           // add a category if it doesn't exist yet
           if (!skillsMap[skill.category]) skillsMap[skill.category] = {
             name: skill.category,
