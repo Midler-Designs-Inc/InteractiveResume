@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
 
     // Set up MongoDB connection details
     const uri = 'mongodb://localhost:27017';
-    const dbName = 'skills_db';
+    const dbName = 'interactive_resume';
     const collectionName = 'skills';
 
     try {

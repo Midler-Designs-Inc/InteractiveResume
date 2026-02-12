@@ -410,28 +410,27 @@
       },
       async saveToApi () {
         try {
-          const dataToSave = {}
+          // Convert model to array of skill objects
+          const skillsArray = []
           for (const [categoryName, category] of Object.entries(this.model)) {
-            const technologies = {}
             for (const [tech, entry] of Object.entries(category.technologies || {})) {
               if (entry.years > 0 || entry.proficiency > 0) {
-                technologies[tech] = entry
-              }
-            }
-            if (Object.keys(technologies).length > 0) {
-              dataToSave[categoryName] = {
-                ...category,
-                technologies
+                skillsArray.push({
+                  category: categoryName,
+                  technology: tech,
+                  years: entry.years,
+                  proficiency: entry.proficiency
+                })
               }
             }
           }
 
-          await fetch('/api/write_skills_survey', {
+          await fetch('/api/skills', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify(dataToSave)
+            body: JSON.stringify(skillsArray)
           })
         } catch (err) {
           console.error('Failed to save data:', err)
