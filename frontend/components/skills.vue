@@ -48,7 +48,6 @@
                 <h4 class="fs-6 mb-0 text-white">{{ skill.technology }}</h4>
                 <div class="d-flex align-items-center gap-3">
                   <div class="text-center">
-<!--                    <span class="d-block small text-muted">Years</span>-->
                     <span class="text-white fw-semibold">{{ skill.years }} yrs</span>
                   </div>
                   <div class="text-center" style="width: 100px;">
@@ -59,8 +58,6 @@
                           class="me-1 fs-7"
                           :class="{'text-warning': i <= skill.proficiency, 'text-secondary': i > skill.proficiency}"
                       />
-<!--                    <span class="d-block small text-muted">Level</span>-->
-<!--                    <span class="text-white fw-semibold">{{ proficiencyEnums[skill.proficiency] }}</span>-->
                   </div>
                 </div>
               </div>
