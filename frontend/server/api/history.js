@@ -1,0 +1,46 @@
+import { MongoClient } from 'mongodb';
+
+export default defineEventHandler(async (event) => {
+    // Only allow GET and POST methods
+    if (event.method !== 'GET' && event.method !== 'POST')
+        throw createError({ statusCode: 405, statusMessage: 'Method Not Allowed' });
+
+    // Set up MongoDB connection details
+    const uri = 'mongodb://localhost:27017';
+    const dbName = 'interactive_resume';
+    const collectionName = 'history';
+
+    try {
+        // Connect to MongoDB
+        const client = new MongoClient(uri);
+        await client.connect();
+        const db = client.db(dbName);
+        const collection = db.collection(collectionName);
+
+        // Handle GET and POST requests based on method
+        if (event.method === 'GET') {
+            // get the params from the URL query string
+            const query = getQuery(event);
+            const searchClause = query.searchClause ? JSON.parse(query.searchClause) : {};
+
+            // Fetch all history entries from the database
+            const history = await collection.find(searchClause).toArray();
+
+            // Return success response with history data
+            return { success: true, data: history };
+        } else if (event.method === 'POST') {
+            const body = await readBody(event);
+
+            // Delete all existing history entries and insert new ones from the request body
+            await collection.deleteMany({});
+            await collection.insertMany(body);
+
+            // Return success response
+            return { success: true };
+        }
+    } catch (err) {
+        // output error to console and throw a 500 error
+        console.error('Error in API:', err);
+        throw createError({statusCode: 500, statusMessage: err.message || 'Internal Server Error' });
+    }
+})
