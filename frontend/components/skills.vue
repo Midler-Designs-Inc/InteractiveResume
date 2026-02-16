@@ -39,7 +39,7 @@
 
     <!-- VIEW ALL: Scrollable List Grouped by Category -->
     <div v-else class="skills-list overflow-x-hidden">
-      <div v-for="(category, i) in skillsMapFull" :key="i" class="mb-4">
+      <div v-for="(category, i) in skillsMapFull" :key="category" class="mb-4">
         <h3 class="fs-5 fw-semibold text-purple-primary mb-3">{{ i }}</h3>
         <div class="row g-3">
           <div class="col-12" v-for="skill in category" :key="skill">

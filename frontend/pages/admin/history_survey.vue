@@ -13,19 +13,28 @@
       <div v-for="(record, index) in historyRecords" :key="record.id || index" class="col-12 mb-4">
         <div class="card glass-card h-100">
           <div class="card-header bg-card border-purple">
-            <h2 class="h5 mb-0 text-purple-primary d-flex align-items-center justify-content-between gap-3 py-3 px-4">
-              Record #{{ index + 1 }}
+            <h2 class="h5 mb-0 text-purple-primary d-flex align-items-center justify-content-between gap-3 py-3">
+              {{ record.title }}
               <button
                 v-if="historyRecords.length > 0"
-                class="btn btn-sm btn-outline-danger"
+                class="btn btn-sm btn-danger"
                 @click="removeRecord(index)"
               >
-                <font-awesome-icon :icon="['fas', 'trash']" />
+                <font-awesome-icon :icon="'fa-solid fa-trash'" class="fs-7"/>
               </button>
             </h2>
           </div>
           <div class="card-body">
             <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label text-muted small">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  :value="record.title"
+                  @input="updateRecord(index, 'title', $event.target.value)"
+                />
+              </div>
               <div class="col-md-3">
                 <label class="form-label text-muted small">Start Date</label>
                 <input
@@ -44,7 +53,9 @@
                   @input="updateRecord(index, 'endDate', $event.target.value)"
                 />
               </div>
-              <div class="col-md-3">
+            </div>
+            <div class="row g-3 mt-2">
+              <div class="col-md-4">
                 <label class="form-label text-muted small">Type</label>
                 <select
                   class="form-select"
@@ -52,17 +63,19 @@
                   @change="updateRecord(index, 'type', $event.target.value)"
                 >
                   <option value="work">Work</option>
-                  <option value="skill acquisition">Skill Acquisition</option>
-                  <option value="experience event">Experience Event</option>
+                  <option value="skill_acquisition">Skill Acquisition</option>
+                  <option value="experience_event">Experience Event</option>
+                  <option value="life_event">Life Event</option>
                 </select>
               </div>
-              <div class="col-md-3 d-flex flex-column align-items-center justify-content-start">
-                <label class="form-check-label text-muted small">Hide Record</label>
+              <div class="col-md-8 d-flex flex-column align-items-start justify-content-start">
+                <label class="form-check-label text-muted small mt-2">Hide Record</label>
                 <div class="form-check form-switch form-switch-lg my-auto form-check-reverse">
                   <input
                     class="form-check-input"
                     type="checkbox"
                     v-model="record.hide"
+                    @change="updateRecord(index, 'hide', $event.target.checked)"
                   >
                 </div>
               </div>
@@ -72,7 +85,7 @@
                 <label class="form-label text-muted small">Description</label>
                 <textarea
                   class="form-control"
-                  rows="3"
+                  rows="5"
                   :value="record.description"
                   @input="updateRecord(index, 'description', $event.target.value)"
                 ></textarea>
@@ -123,6 +136,7 @@
           // Initialize records with existing data
           this.historyRecords = data.data.map(record => ({
             id: record._id,
+            title: record.title || '',
             startDate: record.startDate || '',
             endDate: record.endDate || '',
             type: record.type || 'work',
@@ -144,6 +158,7 @@
       createEmptyRecord () {
         return {
           id: null,
+          title: '',
           startDate: '',
           endDate: '',
           type: 'work',
@@ -164,6 +179,7 @@
         try {
           // Convert records to array of history objects
           const historyArray = this.historyRecords.map(record => ({
+            title: record.title,
             startDate: record.startDate,
             endDate: record.endDate,
             type: record.type,

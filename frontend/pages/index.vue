@@ -11,9 +11,9 @@
           <skills/>
         </div>
 
-        <!-- Work History -->
+        <!-- History -->
         <div class="col-lg-6 col-12">
-          <work-history/>
+          <history/>
         </div>
 
         <!-- Project Showcase -->
